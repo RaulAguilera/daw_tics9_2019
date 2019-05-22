@@ -1,0 +1,35 @@
+<html>
+
+<head></head>
+
+<body>
+    <template id="template1">
+        <h1>Esto es un header en el template</h1>
+        <p>Este es un párrafo en el template</p>
+        <div>
+            <table>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Apellido</td>
+                </tr>
+                <tr>
+                    <td>Juan</td>
+                    <td>Perez</td>
+                </tr>
+            </table>
+
+        </div>
+    </template>
+
+    <script>
+        //Guardar en la variable template el elemento template cuyo id es template1
+        var template = document.querySelector('#template1');
+        //Guardamos en la variable clone el contenido del template
+        var clone = document.importNode(template.content,true);
+        //Agregamos al cuerpo del documento el contenido de la variable clone (es el contenido del template)
+        document.body.appendChild(clone);
+    </script>
+
+</body>
+
+</html>
