@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style>
+            /*Selector universal*/
+            * {
+                color:green;
+            }
+            /*Selector por elemento*/
+            p,span {
+                color: red;
+            }
+            /*Selector por ID*/
+            #parrafo1{
+                font-size: 25px;
+                color:blue;
+            }
+            /*Selector por clase*/
+            p.parrafoClase{
+                color: purple;
+            }
+
+            .spanNaranja{
+                color:orange;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Este es un parrafo</p>
+        <div>
+            <span class="spanNaranja">Este es texto que esta dentro de un div</span>
+        </div>
+        <input class="parrafoClase" type="button" value="Soy un boton">
+        <p>Este otro parrafo</p>
+        <p id="parrafo1">Parrafo con id</p>
+        <p class="parrafoClase">Este es un parrafo con clase</p>
+        <p>Este es un parrafo</p>
+        <p class="parrafoClase">Este es un parrafo con clase</p>
+        <p>Este es un parrafo</p>
+    </body>
+</html>
