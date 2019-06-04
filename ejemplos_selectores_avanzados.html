@@ -1,0 +1,100 @@
+<html>
+<style>
+
+/*Child combinator
+selectorElementoPadre > selectorElemento hijo
+*/
+
+#div1 > p {
+    color:red;
+}
+
+/*Descendant combinator
+selectorElementoPadre selectorElemento hijo
+*/
+
+#div2 p{
+    color:blue;
+}
+
+/*Atribute selector
+input[attribute="valor"]
+*/
+
+p[data-color="naranja"]{
+    color:orange;
+}
+
+/* Pseudo class selector
+elemento:pseudoclase
+*/
+
+a:visited{
+    color:green;
+}
+
+a:hover{
+    color:orchid;
+}
+
+input[type="button"]:hover{
+    color:seagreen;
+}
+
+/*
+Pseudo element
+selector:element
+*/
+
+#div3 p:after{
+    content: "😀";
+}
+
+#div3 p:before{
+    content:"😎";
+}
+
+
+</style>
+
+<body>
+
+    <div id="div1">
+        <p>Hijo directo de div1</p>
+        <p>Segundo hijo directo de div1</p>
+        <span>Este es un span</span>
+        <div>
+            <p>Este es un parrafo dentro de un div hijo de div 1</p>
+        </div>
+    </div>
+
+    <div id="div2">
+        <p>Hijo directo de div1</p>
+        <p>Segundo hijo directo de div1</p>
+        <span>Este es un span</span>
+        <div>
+            <p>Este es un parrafo dentro de un div hijo de div 2</p>
+        </div>
+    </div>
+
+    <div>
+        <p data-color="naranja">Parrafo 1</p>
+        <p data-color="x">Parrafo 2</p>
+        <p data-color="naranja">Parrafo 3</p>
+    </div>
+
+    <div>
+        <a href="#"> Este es un link</a>
+        <input type="button" value="Click me!">
+    </div>
+
+    <div id="div3">
+        <p>Este es un parrafo dentro del div 3</p>
+        <p>Este es un parrafo dentro del div 3</p>
+        <p>Este es un parrafo dentro del div 3</p>
+        <p>Este es un parrafo dentro del div 3</p>
+    </div>
+    
+</body>
+
+</html>
