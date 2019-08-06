@@ -1,0 +1,53 @@
+<html>
+
+<head></head>
+
+<body>
+
+    <script>
+
+        function DiasSemana(dia)
+        {
+            var nombreDia;
+
+            if (isNaN(dia) || Number(dia) > 100) {
+                nombreDia = "Favor de enviar un numero menor o igual 100";
+            }
+            else {
+                if (dia == 1)
+                    nombreDia = "Lunes";
+                else if (dia == 2)
+                    nombreDia = "Martes";
+                else
+                    nombreDia = "No existe";
+
+            }
+
+            return nombreDia;
+        }
+
+        function DiasSemanaSwitch(dia)
+        {
+            var nombreDia;
+
+            switch(dia){
+                case 1:
+                    nombreDia = "Lunes";
+                    break;
+                case 2: 
+                    nombreDia = "Martes";
+                    break;
+                case 3:
+                    nombreDia = "Miercoles";
+                    break;
+                default:
+                    nombreDia = "No existe";
+            }
+
+            return nombreDia;
+        }
+
+    </script>
+</body>
+
+</html>
