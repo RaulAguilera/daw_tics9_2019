@@ -1,0 +1,47 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+        
+
+
+
+        function CrearJsonAlumno()
+        {
+
+            var objetoAlumno = { nombre : "Juan", carrera : "TICs", cuatrimestre : 9 };
+
+            //Accedemos a cada una de las propiedades del objeto
+            console.log(objetoAlumno.nombre);
+            console.log(objetoAlumno.carrera);
+            console.log(objetoAlumno.cuatrimestre);
+
+            //Cambiamos el valor de la propiedad nombre
+            objetoAlumno.nombre = "Pedro";
+
+            console.log(objetoAlumno.nombre);
+
+            //Mostramos el objeto
+            console.log(objetoAlumno);
+            //Mostramos el objeto convertido a una cadena de texto
+            console.log(JSON.stringify(objetoAlumno));
+
+            //alert(objetoAlumno);
+            //alert(JSON.stringify(objetoAlumno));
+
+            //Creamos una cadena de texto que representa un objeto json
+            var cadenaObjeto = '{ "nombre" : "raul", "apellido" : "aguilera" }';
+
+            //alert(cadenaObjeto);
+            //alert(JSON.parse(cadenaObjeto));
+
+            //Mostramos la cadena de texto
+            console.log(cadenaObjeto);
+            //Convertimos la cadena de texto a un objeto
+            console.log(JSON.parse(cadenaObjeto));
+
+        }
+        
+        </script>
+    </body>
+</html>
