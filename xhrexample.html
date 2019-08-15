@@ -1,0 +1,51 @@
+<html>
+<head></head>
+<body>
+
+<script>
+
+//Reference docs https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started
+
+var httpRequest;
+
+function CallWeatherAPI()
+{
+    //We create the request object
+    httpRequest = new XMLHttpRequest();
+
+    //Tell the request object which function will handle the response
+    httpRequest.onreadystatechange = HandleResponse;
+    
+    //We specify the url to which the request will be made
+    httpRequest.open("GET","http://api.openweathermap.org/data/2.5/weather?q=monterrey,mx&appid=291e31dc54c6a32c4351dd134c9f11ab&units=metric",true);
+    //We send the request including the appropriate parameters
+    httpRequest.send();
+
+}
+
+//This is the function that will handle the response
+function HandleResponse()
+{
+    var responseText;
+    var responseObject; 
+
+    //We check the request state if 'DONE' then we're ready to process it
+    if (httpRequest.readyState === XMLHttpRequest.DONE) {
+        //We extract the response text
+        responseText = httpRequest.responseText;
+        //Then we parse the response text into a JSON object.
+        responseObject = JSON.parse(responseText);
+        //We log the received text/object into console
+        console.log(responseText);
+        console.log(responseObject);
+
+        //Alert the temperature property of the response
+        alert("Current temperature is: " + responseObject.main.temp);
+    }
+
+}
+
+</script>
+
+</body>
+</html>
