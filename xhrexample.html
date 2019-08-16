@@ -17,8 +17,8 @@ function CallWeatherAPI()
     httpRequest.onreadystatechange = HandleResponse;
     
     //We specify the url to which the request will be made
-    httpRequest.open("GET","http://api.openweathermap.org/data/2.5/weather?q=monterrey,mx&appid={llave}&units=metric",true);
-    //We send the request including the appropriate parameters
+    httpRequest.open("GET","http://api.openweathermap.org/data/2.5/weather?q=guadalajara,mx&appid={llave}&units=metric",true);
+    //We send the request
     httpRequest.send();
 
 }
